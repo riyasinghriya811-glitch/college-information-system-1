@@ -1,0 +1,55 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin/admin.master" AutoEventWireup="true"
+    CodeFile="admin_home.aspx.cs" Inherits="admin_admin_home" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <table width="100%" cellpadding="0" cellspacing="7" border="0">
+        <tr>
+            <td colspan="3" style="background-color: #363258">
+                <table width="100%" cellpadding="0" cellspacing="1" border="0">
+                    <tr>
+                        <td align="left">
+                            <asp:Label ID="Label3" runat="server" Text="Welcome TO ADMIN...." 
+                                Font-Size="16pt" ForeColor="White"></asp:Label>
+                        </td>
+                        <td align="right">
+                            <asp:Label ID="Label2" runat="server" Font-Size="12pt" ForeColor="White" ></asp:Label>
+                        </td>
+                    </tr>
+                </table>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <hr style="background-color: #363258; height: 0.2em">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Visited User Information ....
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
+                    <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+                    <EditRowStyle BackColor="#999999" />
+                    <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                    <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                    <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                    <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                    <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                    <SortedAscendingCellStyle BackColor="#E9E7E2" />
+                    <SortedAscendingHeaderStyle BackColor="#506C8C" />
+                    <SortedDescendingCellStyle BackColor="#FFFDF8" />
+                    <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+                </asp:GridView>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <hr style="background-color: #363258; height: 0.2em">
+            </td>
+        </tr>
+    </table>
+</asp:Content>

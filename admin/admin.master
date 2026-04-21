@@ -1,0 +1,91 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="admin_server.master.cs"
+    Inherits="admin_admin_server" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <link href="../styles.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+            <td>
+                <h1>
+                    Admin panel</h1>
+                <hr />
+                <div id="dolphincontainer">
+                    <div id="dolphinnav">
+                        <ul>
+                            <li><a href="admin_home.aspx" class="current"><span>Home</span></a></li>
+                            <li><a href="admin_cources.aspx"><span>Cources_Detail</span></a></li>
+                            <li><a href="admin_department.aspx"><span>Department</span></a></li>
+                            <li><a href="admin_fecultylist.aspx"><span>Faculty List</span></a></li>
+                            <li><a href="admin_feculty.aspx"><span>Feculty_Information</span></a></li>
+                            <li><a href="admin_fileupload.aspx"><span>File Upload</span></a></li>
+                            <li><a href="student_corner.aspx"><span>Student_Topers_Details</span></a></li>
+                            <li><a href="admin_download.aspx"><span>Download_Information</span></a></li>
+                            <li><a href="admin_login.aspx"><span>Admin_Change</span></a></li>
+                            <li><a href=""><span></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table width="100%">
+                    <tr>
+                        <td style="width: 40%">
+                        </td>
+                        <td style="width: 40%">
+                        </td>
+                        <td style="width: 20%" align="center">
+                            <asp:LinkButton ID="LinkButton1" runat="server" ForeColor="#999966" OnClick="LinkButton1_Click"
+                                PostBackUrl="~/login.aspx">Logout</asp:LinkButton>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 70%" valign="top">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                        <td style="width: 25%">
+                            &nbsp;
+                        </td>
+                        <td style="width: 50%">
+                            <table width="100%" cellpadding="0" cellspacing="0" border="1" style="border-style: outset;
+                                border-color: Silver">
+                                <tr>
+                                    <td>
+                                        <asp:Panel ID="Panel1" runat="server" BorderColor="Red">
+                                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                            </asp:ContentPlaceHolder>
+                                        </asp:Panel>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td style="width: 25%">
+                            &nbsp;
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <div>
+    </div>
+    </form>
+</body>
+</html>

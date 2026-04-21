@@ -1,0 +1,199 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="client.master.cs" Inherits="client_client" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Merchant Polytechnic</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <meta http-equiv="imagetoolbar" content="no" />
+    <link rel="stylesheet" href="../styles/layout.css" type="text/css" />
+    <!-- Homepage Specific Elements -->
+    <script type="text/javascript" src="../scripts/jquery-1.4.1.min.js"></script>
+    <script type="text/javascript" src="../scripts/jquery-ui-1.7.2.custom.min.js"></script>
+    <script type="text/javascript" src="../scripts/jquery.tabs.setup.js"></script>
+    <!-- End Homepage Specific Elements -->
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            height: 25px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="wrapper row1">
+        <div id="header" class="clear">
+            <div class="fl_left">
+                <h1>
+                    <a href="home.aspx">MERCHANT POLYTECHNIC </a>
+                </h1>
+                <p>
+                    COLLEGE</p>
+            </div>
+            <div class="fl_right">
+                <ul>
+                    <li><a href="home.aspx">Home</a></li>
+                    <li><a href="contact.aspx">Contact Us</a></li>
+                    <li><a href="About Us.aspx">About Us</a></li>
+                    <li class="last"><a href="../login.aspx">Admin Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper row2">
+        <div class="rnd">
+            <div id="topnav">
+                <ul>
+                    <li><a href="home.aspx">Home</a></li>
+                    <li><a href="cource.aspx">Cources</a></li>
+                    <li><a href="department.aspx">Department</a></li>
+                    <li><a href="gellery.aspx">Gallery</a></li>
+                    <li><a href="faculty.aspx">Faculty Profile</a></li>
+                    <li><a href="studentcorner.aspx">Student Corner</a></li>
+                    <li><a href="facility.aspx">Facility</a></li>
+                    <li><a href="download.aspx">Downloads</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div id="featured_slide" class="clear">
+            <div class="overlay_left">
+            </div>
+            <div id="featured_content">
+                <div class="featured_box" id="fc1">
+                    <img src="images/header.jpg" alt="" />
+                </div>
+            </div>
+            <div class="featured_box" id="fc4">
+                <div class="floater">
+                    <h2>
+                    </h2>
+                    <p>
+                    </p>
+                    <p class="readmore">
+                        <a href="#">Continue Reading &raquo;</a></p>
+                </div>
+            </div>
+        </div>
+        <ul id="featured_tabs">
+        </ul>
+        <div class="overlay_right">
+        </div>
+    </div>
+    <div class="wrapper row3">
+        <div class="rnd">
+            <div id="container" class="clear">
+                <div id="homepage" class="clear">
+                    <div style="width: 100%">
+                        <table width="100%" cellpadding="0" cellspacing="1" border="0">
+                            <tr>
+                                <td style="width: 30%; background-color: #FFE7BA">
+                                    <table width="100%" border="0">
+                                        <tr>
+                                            <td style="background-color: #8B0000;" class="style1">
+                                                <marquee direction="left" scrollamount="1" style="height: 23px"><asp:Label ID="Label1" runat="server" Text="News Updates..."></asp:Label></marquee>
+                                            </td>
+                                        </tr>
+                                        <%-- <tr>
+                                            <td style="background-color:">
+                                                <marquee id="ml" style="text-align:left" direction="up" width="95%" height="170"
+                                                    scrolldelay="20" scrollamount="1" onmouseover="ml.stop();" onmouseout="ml.start();">
+                                                    <asp:DataList ID="DataList1" runat="server">
+                                                    <ItemTemplate>
+                                                     <table width="100%" cellpadding="0" cellspacing="0" border="0" align="left" >
+                                                     <tr>
+                                                     <td><asp:Label ID="Label2" runat="server" Text='<%#Eval("message") %>' ForeColor="Black" Font-Size="14pt"></asp:Label>
+                                                     </td>
+                                                     </tr>
+                                                     </table>
+                                                    </ItemTemplate>
+                                                   
+                                                    </asp:DataList>
+                                            </td>
+                                        </tr>--%>
+                                        <tr>
+                                            <td>
+                                                <table border="0">
+                                                    <tr>
+                                                        <td>
+                                                            <asp:LinkButton ID="LinkButton1" runat="server" Font-Size="12pt" PostBackUrl="http://www.gtu.ac.in/results.asp">See
+                                                                Result Here...</asp:LinkButton>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <asp:LinkButton ID="LinkButton2" runat="server" PostBackUrl="http://gtu.ac.in/syllabus/DE_SchemeSyllabus.htm"
+                                                                Font-Size="12pt">GTU Syllabus...</asp:LinkButton>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <asp:LinkButton ID="LinkButton3" runat="server" PostBackUrl="http://www.gtu.edu.in/Qpaper.html"
+                                                                Font-Size="12pt">Paper Samples...</asp:LinkButton>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <asp:LinkButton ID="LinkButton4" runat="server" PostBackUrl="../admin/files/AC_1213.pdf"
+                                                                Font-Size="12pt">Academic Calendar....</asp:LinkButton>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <asp:LinkButton ID="LinkButton5" runat="server" PostBackUrl="../admin/files/Mandatory_Disclousre_2011.pdf"
+                                                                Font-Size="12pt">Mandatory</asp:LinkButton>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <asp:LinkButton ID="LinkButton6" runat="server" PostBackUrl="~/client/download.aspx"
+                                                                Font-Size="12pt">Downlaod</asp:LinkButton>
+                                                        </td>
+                                                    </tr>
+                                                    <%--<tr>
+                                                        <td>
+                                                            <asp:DataList BackColor="#CCD6E7" CellPadding="1" BorderWidth="0px" Width="100%"
+                                                                ID="lstnewsevents" runat="server" BorderColor="#E7E7FF" BorderStyle="None" GridLines="Horizontal"
+                                                                ShowFooter="False" ShowHeader="False">
+                                                                <FooterStyle BackColor="#B5C7DE" ForeColor="#4A3C8C" />
+                                                                <AlternatingItemStyle BackColor="#CCD6E7" />
+                                                                <ItemStyle BackColor="#CCD6E7" />
+                                                                <SelectedItemStyle BackColor="#738A9C" Font-Bold="True" ForeColor="#CCD6E7" />
+                                                                <HeaderStyle BackColor="#CCD6E7" Font-Bold="True" ForeColor="#F7F7F7" />
+                                                                <ItemTemplate>
+                                                                    <table cellpadding="0" cellspacing="0" border="0" align="left" style="width: 100%">
+                                                                        <tr>
+                                                                            <td class="clientname" align="left" style="width: 15%; vertical-align: top">
+                                                                                <asp:HyperLink ID="HyperLink1" runat="server">(<%#Container.ItemIndex + 1 %>)</asp:HyperLink>
+                                                                            </td>
+                                                                            <td class="clientname" align="left" style="padding-left: 2px; width: 85%">
+                                                                                <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl='<%#Eval("NewsDetail") %>'><%#Eval("NewsTitle")%></asp:HyperLink>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </ItemTemplate>
+                                                            </asp:DataList>
+                                                        </td>
+                                                    </tr>--%>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td style="width: 70%; background-color: #FFE7BA">
+                                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                    </asp:ContentPlaceHolder>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
